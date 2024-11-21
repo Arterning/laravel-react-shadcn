@@ -17,6 +17,10 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
+    @if (request()->routeIs('blade.*'))
+        @yield('content')
+    @else
         @inertia
+    @endif 
     </body>
 </html>

@@ -19,6 +19,13 @@ Route::get('/demo0', function() {
     return Inertia::render('Demo0');
 });
 
+Route::group(['as' => 'blade.'], function () {
+    Route::get('/about', function() {
+        return view('about');
+    })->name('about');
+});
+
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
