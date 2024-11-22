@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GithubController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -28,6 +29,10 @@ Route::group(['as' => 'blade.'], function () {
     })->name('about');
 });
 
+
+// GithubController redirect and callback urls
+Route::get('/auth/github', [GithubController::class, 'redirect'])->name('auth.github');
+Route::get('/auth/github/callback', [GithubController::class, 'callback']);
 
 
 Route::get('/dashboard', function () {

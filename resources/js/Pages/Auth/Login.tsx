@@ -3,6 +3,7 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
+import { Button } from '@/components/ui/button';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
@@ -101,6 +102,12 @@ export default function Login({
                         Log in
                     </PrimaryButton>
                 </div>
+
+                <a href={route('auth.github')} className="inline-flex items-center px-2 float-left py-2 bg-gray-100 hover:bg-gray-200 border border-gray-300 tracking-widest focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ease-in-out h-10 mt-2 font-semibold text-xs transition-colors duration-150 rounded-lg uppercase focus:shadow-outline0 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-100 text-black">
+                    <img src="https://www.cdnlogo.com/logos/g/55/github.svg" className="w-6 p-1 text-white" />
+                    Login with GitHub
+                </a>
+
             </form>
         </GuestLayout>
     );
