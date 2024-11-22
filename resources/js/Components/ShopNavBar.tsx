@@ -16,6 +16,12 @@ const ShopNavbar = () => {
             href: "demo0",
             label: "go",
         },
+        {
+            id: 3,
+            name: "Demo1",
+            href: "demo1",
+            label: "go",
+        },
     ];
 
     const routes = data.map((route) => ({
