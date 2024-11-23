@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GithubController;
+use App\Http\Controllers\AppearanceController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,7 +22,7 @@ Route::get('/demo0', function() {
 });
 Route::get('/demo1', function() {
     return Inertia::render('Demo1');
-});
+})->name('demo1');
 Route::get('/paytable', function() {
     return Inertia::render('PayTable');
 });
@@ -29,6 +30,9 @@ Route::get('/ai-landing', function() {
     return Inertia::render('AILanding');
 });
 
+Route::get('/start', function() {
+    return Inertia::render('StartPage');
+})->name('start');
 
 Route::group(['as' => 'blade.'], function () {
     Route::get('/about', function() {
@@ -52,4 +56,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::resource('appearance', AppearanceController::class);
+    
 require __DIR__.'/auth.php';
