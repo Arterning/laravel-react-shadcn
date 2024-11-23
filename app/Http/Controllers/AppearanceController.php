@@ -15,8 +15,12 @@ class AppearanceController extends Controller
     public function index()
     {
         //
+        $appearance = Appearance::find(1);
         // return response('Hello, World!');
-        return Inertia::render('Demo1');
+        return Inertia::render('StartFinish', [
+            'name' => 'arterning',
+            'sex' => $appearance->sex,
+        ]);
     }
 
     /**
