@@ -22,6 +22,9 @@ Route::get('/demo0', function() {
 Route::get('/demo1', function() {
     return Inertia::render('Demo1');
 });
+Route::get('/paytable', function() {
+    return Inertia::render('PayTable');
+});
 
 Route::group(['as' => 'blade.'], function () {
     Route::get('/about', function() {

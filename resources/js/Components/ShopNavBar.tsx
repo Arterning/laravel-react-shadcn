@@ -5,12 +5,6 @@ import { cn } from "@/lib/utils";
 const ShopNavbar = () => {
     const data = [
         {
-            id: 1,
-            name: "About",
-            href: "about",
-            label: "go",
-        },
-        {
             id: 2,
             name: "Demo0",
             href: "demo0",
@@ -21,6 +15,12 @@ const ShopNavbar = () => {
             name: "Demo1",
             href: "demo1",
             label: "go",
+        },
+        {
+            id: 4,
+            name: "PayTable",
+            href: "paytable",
+            label: "PayTable",
         },
     ];
 
